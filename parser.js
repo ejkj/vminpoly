@@ -286,12 +286,14 @@ AtRule.registry = {
 	'font-face': 'declaration',
 	'page': 'declaration',
 	'keyframes': 'rule',
+	'-webkit-keyframes': 'rule',
 	'namespace': '',
 	'counter-style': 'declaration',
 	'supports': 'rule',
 	'document': 'rule',
 	'font-feature-values': 'declaration',
 	'viewport': '',
+	'-ms-viewport': 'rule',
 	'region-style': 'rule'
 };
 
