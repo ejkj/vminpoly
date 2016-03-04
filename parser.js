@@ -41,7 +41,7 @@ function parse(tokens) {
 				mode = rule.fillType;
 			else if(rule.type == 'STYLESHEET')
 				mode = 'top-level'
-			else { console.log("Unknown rule-type while switching to current rule's content mode: ",rule); mode = ''; }
+			else { mode = ''; }
 		} else {
 			mode = newmode;
 		}
@@ -53,7 +53,6 @@ function parse(tokens) {
 		return true;
 	}
 	var parseerror = function(msg) {
-		console.log("Parse error at token " + i + ": " + token + ".\n" + msg);
 		return true;
 	}
 	var pop = function() {
@@ -191,7 +190,6 @@ function parse(tokens) {
 
 		default:
 			// If you hit this, it's because one of the switchto() calls is typo'd.
-			console.log('Unknown parsing mode: ' + mode);
 			return;
 		}
 	}

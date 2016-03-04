@@ -40,7 +40,6 @@
       if (!(xmlhttp.status === 200 || url.match(/^file:\/\/\//))) {
         throw "Error!";
       }
-      console.log("INFO: processing " + url);
       onload(xmlhttp.responseText);
     };
     try {
@@ -48,7 +47,6 @@
       xmlhttp.send();
     } catch (_error) {
       e = _error;
-      console.log("ERROR: " + e.message + " (" + e.type + ") when accessing " + url);
     }
   };
 
@@ -349,8 +347,6 @@
     }
     window.onresize = onresize;
   };
-
-  console.log('About to do the engine unless...', browserSupportsUnitsNatively());
 
   if (!browserSupportsUnitsNatively()) {
     initLayoutEngine();
