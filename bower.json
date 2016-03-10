@@ -1,6 +1,10 @@
 {
   "name": "vminpoly",
-  "main": "vminpoly.js",
+  "main": [
+    "parser.js",
+    "tokenizer.js",
+    "vminpoly.js"
+  ],
   "version": "0.1.0",
   "homepage": "https://github.com/saabi/vminpoly",
   "authors": [
